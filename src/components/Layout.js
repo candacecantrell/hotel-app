@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 //import Aux from './hoc/Aux';
-import './Layout.css';
 import Toolbar from './Toolbar';
 import SideDrawer from './NavigationItems/SideDrawer';
 import Footer from './Footer/footer'
+
 class Layout extends Component {
     state = {
         showSideDrawer: false

@@ -1,0 +1,314 @@
+.toolbar {
+  height: 90px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #F3E5F5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 90;
+}
+.burgerMenu {
+  font-size: 20px;
+  border-radius: 7px;
+  border: none;
+  background-color: #D1C4E9;
+}
+.burgerMenu a {
+  color: #D81B60;
+}
+.burgerMenu a:hover {
+  color: #F48FB1;
+}
+.toolbar nav {
+  height: 80%;
+}
+.toolbarTitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+}
+.headerTitle a {
+  text-decoration: none;
+  color: black;
+}
+.toolbar input {
+  width: 200px;
+  font-size: 16px;
+  border: 1px solid black;
+  margin-top: -50px;
+}
+.toolbarNavItem a {
+  text-decoration: none;
+  color: black;
+  padding: 16px 16px;
+}
+.toolbarNavItem {
+  font-size: 14px;
+}
+.toolbarNavItem .active {
+  color: #D1C4E9;
+}
+.toolbarNavItems {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  position: fixed;
+  left: 0;
+  top: 72px;
+  width: 100%;
+  background-color: #BA68C8;
+  padding: 8px 0 8px 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+html {
+  font-family: 'Ubuntu', sans-serif;
+}
+.App {
+  text-align: center;
+}
+.styleAll {
+  box-sizing: border-box;
+}
+.footer {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  background-color: #F3E5F5;
+  justify-content: center;
+}
+.footer p {
+  padding: 20px 0 20px 0;
+}
+p {
+  font-size: 12px;
+}
+.heroClass {
+  margin-top: 72px;
+  position: relative;
+}
+.heroClass .homeHeroImg {
+  width: 100%;
+  height: auto;
+}
+.heroClass .heroSlogan {
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin-bottom: 40px;
+}
+.hotelDiv {
+  position: relative;
+  color: white;
+  text-align: left;
+}
+.hotelDiv .hotelList {
+  box-sizing: border-box;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0px;
+  background-color: black;
+  width: 100%;
+}
+.hotelDiv .hotelList li {
+  margin: 4px 0 8px 0;
+}
+.hotelDiv .hotelList .hotelName {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.hotelDiv .btnBook {
+  margin-bottom: 4px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: none;
+  background-color: #F3E5F5;
+  padding: 3px 5px;
+}
+.hotelDiv .btnBook :hover {
+  padding: 2px 4px;
+  background-color: #D1C4E9;
+}
+.hotelDiv .btnBook a {
+  text-decoration: none;
+  color: black;
+}
+.hotelDiv {
+  padding: 20px 0 0 0;
+  width: 90%;
+  margin: 20px 5% 30px 5%;
+}
+.hotelDiv .hotelPhoto {
+  width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 768px) {
+  .hotelDiv {
+    padding: 50px 0 50px 0;
+    float: left;
+    width: 43%;
+    margin: 0 3.5% 50px 3.5%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .hotelDiv {
+    width: 29.3%;
+    margin: 0 2% 50px 2%;
+  }
+}
+.Backdrop {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.DrawerToggle {
+  width: 40px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.DrawerToggle div {
+  width: 90%;
+  height: 3px;
+  background-color: white;
+}
+/* @media (min-width: 500px) {
+    .DrawerToggle {
+        display: none;
+    }
+} */
+.Open {
+  transform: translateX(0);
+}
+.Close {
+  transform: translateX(-100%);
+}
+/* .Logo {
+    height: 11%;
+    margin-bottom: 32px;
+} */
+.Content {
+  text-align: center;
+}
+main {
+  margin-bottom: 50px;
+}
+.hotelDataDiv p {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.hotelDataList {
+  list-style-type: none;
+}
+.hotelAmenatiesList {
+  list-style-type: none;
+  font-size: 16px;
+}
+.hotelAmenatiesList li {
+  margin: 20px 0 20px 0;
+}
+.hotelAmenatiesList .disabledIcon {
+  color: #E0E0E0;
+}
+.hotelAmenatiesList .trueIcon {
+  color: black;
+}
+.hotelAmenatiesList .checkClass {
+  visibility: hidden;
+}
+.hotelInfoClass {
+  margin: 0 auto;
+}
+.hotelInfoClass img {
+  width: 84%;
+  height: auto;
+  padding: 10px 7% 30px 7%;
+}
+.monthDropdown {
+  margin: 50px 0 50px 0;
+}
+.bookingModal {
+  margin: center center;
+}
+.bookingInfoCheckout {
+  font-size: 18px;
+}
+.hotelDetailsList {
+  list-style-type: none;
+}
+.overviewDiv {
+  width: 90%;
+  margin: 30px 5% 50px 5%;
+}
+.overviewDiv ul {
+  margin-top: 30px;
+}
+.overviewDiv p {
+  text-align: start;
+}
+.hotelDataImg {
+  margin-top: 80px;
+}
+.checkClass {
+  color: #00E676;
+}
+.bookingModalButton {
+  margin: 40px 0 40px 0;
+}
+@media only screen and (min-width: 768px) {
+  .hotelInfoClass {
+    width: 100vw;
+  }
+  .hotelInfoClass .photoOverviewDiv {
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    margin: 30px 0 30px 0;
+  }
+  .hotelInfoClass img {
+    width: 50vw;
+    height: auto;
+    float: left;
+    padding: 10px 20px 30px 20px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .photoOverviewDiv {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    margin: 30px 0 30px 0;
+  }
+}
+.checkoutForm {
+  width: 80%;
+  margin: 50px 10% 0 10%;
+}
+.bookingModalClass {
+  width: 90%;
+  margin: 20px 5% 0 5%;
+}
+.reservationDetails {
+  margin-top: 150px;
+}

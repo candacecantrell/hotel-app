@@ -1,0 +1,196 @@
+{
+    "moteldata": {
+        "motel": [{
+            "name": {
+                "text": "Quinault Motel Las Vegas"
+            },
+            "address": {
+                "text": "4044 Hickory Ridge Drive, Las Vegas, NV 89108"
+            },
+            "photo": {
+                "text": "/photos/motels/lasvegas"
+            },
+            "desc": {
+                "text": "Straightforward budget lodging offering modern rooms & an outdoor pool, plus free morning coffee."
+            },
+            "office hrs": {
+                "text": "24 hrs"
+            },
+            "check_in_time": {
+                "text": "3:00 PM"
+            },
+            "check_out_time": {
+                "text": "12:00 PM"
+            },
+            "price_1": {
+                "text": 63
+            },
+            "price_2": {
+                "text": 63
+            },
+            "price_3": {
+                "text": 68
+            },
+            "price_4": {
+                "text": 88 
+            },
+            "phone": {
+                "text": "(702) 831-9498"
+            }
+        },
+        {
+            "name": {
+                "text": "Quinault Motel San Diego"
+            },
+            "address": {
+                "text": "address: 1755 Ashcraft Court, San Diego, CA 92101"
+            },
+            "photo": {
+                "text": "/photos/motels/sandiego"
+            },
+            "desc": {
+                "text": "Straightforward budget lodging offering modern rooms & an outdoor pool, plus free morning coffee."
+            },
+            "office hrs": {
+                "text": "24 hrs"
+            },
+            "check_in_time": {
+                "text": "3:00 PM"
+            },
+            "check_out_time": {
+                "text": "12:00 PM"
+            },
+            "price_1": {
+                "text": 71
+            },
+            "price_2": {
+                "text": 71
+            },
+            "price_3": {
+                "text": 76
+            },
+            "price_4": {
+                "text": 96
+            },
+            "phone": {
+                "text": "(619)921-9170"
+            }
+        },
+        {
+            "name": {
+                "text": "Quinault Motel Portland"
+            },
+            "address": {
+                "text": "3840 Mattson Street, Portland, OR 97205"
+            },
+            "photo": {
+                "text": "/photos/motels/portland"
+            },
+            "desc": {
+                "text": "Straightforward budget lodging offering modern rooms & an outdoor pool, plus free morning coffee."
+            },
+            "office hrs": {
+                "text": "24 hrs"
+            },
+            "check_in_time": {
+                "text": "3:00 PM"
+            },
+            "check_out_time": {
+                "text": "12:00 PM"
+            },
+            "price_1": {
+                "text": 76
+            },
+            "price_2": {
+                "text": 76
+            },
+            "price_3": {
+                "text": 81
+            },
+            "price_4": {
+                "text": 101
+            },
+            "phone": {
+                "text": "(503) 862-9642"
+            }
+        },
+        {
+            "name": {
+                "text": "Quinault Motel Miami"
+            },
+            "address": {
+                "text": "3301 W Flager St, Miami, FL 33135"
+            },
+            "photo": {
+                "text": "/photos/motels/miami"
+            },
+            "desc": {
+                "text": "Straightforward budget lodging offering modern rooms & an outdoor pool, plus free morning coffee."
+            },
+            "office hrs": {
+                "text": "24 hrs"
+            },
+            "check_in_time": {
+                "text": "3:00 PM"
+            },
+            "check_out_time": {
+                "text": "12:00 PM"
+            },
+            "price_1": {
+                "text": 66
+            },
+            "price_2": {
+                "text": 66
+            },
+            "price_3": {
+                "text": 71
+            },
+            "price_4": {
+                "text": 91
+            },
+            "phone": {
+                "text": "(305)930-1037"
+            }
+        },
+        {
+            "name": {
+                "text": "Quinault Motel Seattle"
+            },
+            "address": {
+                "text": "13050 48th Ave S, Seattle, WA 98168"
+            },
+            "photo": {
+                "text": "/photos/motels/seattle"
+            },
+            "desc": {
+                "text": "Straightforward budget lodging offering modern rooms & an outdoor pool, plus free morning coffee."
+            },
+            "office hrs": {
+                "text": "24 hrs"
+            },
+            "check_in_time": {
+                "text": "3:00 PM"
+            },
+            "check_out_time": {
+                "text": "12:00 PM"
+            },
+            "price_1": {
+                "text": 66
+            },
+            "price_2": {
+                "text": 66
+            },
+            "price_3": {
+                "text": 71
+            },
+            "price_4": {
+                "text": 91
+            },
+            "phone": {
+                "text": "(206) 316-8049"
+            }
+        }]
+
+    }
+
+}
