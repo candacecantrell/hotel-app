@@ -35,6 +35,10 @@
   text-decoration: none;
   color: black;
 }
+.headerTitle :hover {
+  text-decoration: none;
+  color: black;
+}
 .toolbar input {
   width: 200px;
   font-size: 16px;
@@ -52,6 +56,10 @@
 .toolbarNavItem .active {
   color: #D1C4E9;
 }
+.toolbarNavItem :hover {
+  text-decoration: none;
+  color: #D1C4E9;
+}
 .toolbarNavItems {
   list-style: none;
   display: flex;
@@ -64,6 +72,9 @@
   width: 100%;
   background-color: #BA68C8;
   padding: 8px 0 8px 0;
+}
+.toolbarNavItems a {
+  text-decoration: none;
 }
 body {
   margin: 0;
@@ -131,15 +142,6 @@ p {
 }
 .hotelDiv .btnBook {
   margin-bottom: 4px;
-  font-size: 14px;
-  border-radius: 3px;
-  border: none;
-  background-color: #F3E5F5;
-  padding: 3px 5px;
-}
-.hotelDiv .btnBook :hover {
-  padding: 2px 4px;
-  background-color: #D1C4E9;
 }
 .hotelDiv .btnBook a {
   text-decoration: none;
@@ -311,4 +313,42 @@ main {
 }
 .reservationDetails {
   margin-top: 150px;
+}
+.navigationItem {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.navigationItem :hover {
+  text-decoration: none;
+}
+.navigationItem a {
+  color: #AB47BC;
+  text-decoration: none;
+  height: 100%;
+  padding: 16px 10px;
+  border-bottom: 4px solid transparent;
+  box-sizing: border-box;
+  display: block;
+}
+.navigationItem a :hover {
+  text-decoration: none;
+}
+.navigationItem a .active {
+  color: #83ddce;
+}
+.navigationItem a:hover,
+.navigationItem a:active,
+.navigationItem a.active {
+  color: #83ddce;
+}
+.navigationItems {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  list-style: none;
 }

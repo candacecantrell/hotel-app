@@ -11,7 +11,7 @@ function HotelCard(props) {
             <ul className='hotelList'>
             <li className="hotelName" >{props.name}</li>
             <li>{props.address}</li>
-            <button className="btnBook">
+            <button type="button" className="btn btn-light btn-sm btnBook">
     <NavLink to={props.link}>Visit {props.city}</NavLink>
                 </button>
     <div>{props.image}</div>

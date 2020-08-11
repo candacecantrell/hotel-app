@@ -9,8 +9,7 @@ import { NavLink } from "react-router-dom";
 const toolbar = (props) => (
     <header className="toolbar" >
         <DrawerToggle clicked={props.drawerToggleClicked}/>
-        <div className="Logo">
-            {/* <h2>Quinault Motels</h2> */}
+        <div>
             <h2 className="headerTitle" >
             <NavLink to="/" exact>Quinault Motels</NavLink>
             </h2>

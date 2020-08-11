@@ -50,7 +50,7 @@ function CheckoutData(props) {
         //   [e.target.name]: e.target.value.trim()
         // });
         //console.log(formData.)
-        if(formData.checkInGuests !== state.guestCheckInData.checkInGuests) {
+        if(state.guestCheckInData && formData.checkInGuests !== state.guestCheckInData.checkInGuests) {
           setIsValid(true);
         }
         else {
@@ -81,7 +81,7 @@ function CheckoutData(props) {
                  <p>Guests: {checkInData.checkInGuests}</p>
                  <p>Nights: {checkInData.checkInNights}</p>
                  <p>Beds: {checkInData.checkInRooms}</p>
-                 <button onClick={() => setCheckoutModalShow(true)} >Edit</button>
+                 <button type="button" className="btn btn-outline-info btn-sm" onClick={() => setCheckoutModalShow(true)} >Edit Booking</button>
                 <CheckoutForm/>
                 <BookingModal
         isInvalid={isValid}
@@ -92,8 +92,8 @@ function CheckoutData(props) {
         defaultDateValue={checkInData.checkInDate}
         defaultNightsValue={checkInData.checkInNights}
         //guestChange={guestChange}
-        // cancelModal={() => setCheckoutModalShow(false)}
-        // backdropClicked={() => setCheckoutModalShow(false)}
+        cancelModal={() => setCheckoutModalShow(false)}
+        backdropClicked={() => setCheckoutModalShow(false)}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
         // estimatedTotal={'$' + guestCostEstimate || 0}
