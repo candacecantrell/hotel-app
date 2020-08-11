@@ -95,59 +95,63 @@ export function NightsDropdown(props) {
   );
 }
 
-export const CheckRooms1 = (props) => (
-    <div class="form-check">
-    <input type="checkbox" class="form-check-input" id="checkRoom1King"/>
-    <label class="form-check-label" for="checkRoom1King">1 King Bed</label>
-  </div>
+// export const CheckRooms1 = (props) => (
+//     <div class="form-check">
+//     <input type="checkbox" class="form-check-input" id="checkRoom1King"/>
+//     <label class="form-check-label" for="checkRoom1King">1 King Bed</label>
+//   </div>
 
-);
+// );
 
-export const CheckRooms2 = (props) => (
-<div>
-  <div class="form-check">
-  <input type="checkbox" class="form-check-input" id="checkRoom2Queen"/>
-  <label class="form-check-label" for="checkRoom2Queen">2 Queen Beds</label>
-</div>
-  <div class="form-check">
-  <input type="checkbox" class="form-check-input" id="checkRoom2Queen"/>
-  <label class="form-check-label" for="checkRoom2Queen">1 King Bed</label>
-</div>
-</div>
-);
+// export const CheckRooms2 = (props) => (
+// <div>
+//   <div class="form-check">
+//   <input type="checkbox" class="form-check-input" id="checkRoom2Queen"/>
+//   <label class="form-check-label" for="checkRoom2Queen">2 Queen Beds</label>
+// </div>
+//   <div class="form-check">
+//   <input type="checkbox" class="form-check-input" id="checkRoom2Queen"/>
+//   <label class="form-check-label" for="checkRoom2Queen">1 King Bed</label>
+// </div>
+// </div>
+// );
 
-export const CheckRooms3 = (props) => (
+// export const CheckRooms3 = (props) => (
 
-<div>
-  <div class="form-check">
-  <input type="checkbox" class="form-check-input" id="checkRoom3Queen"/>
-  <label class="form-check-label" for="checkRoom3Queen">2 Queen Beds, 1 Sofa Bed</label>
-</div>
-  <div class="form-check">
-  <input type="checkbox" class="form-check-input" id="checkRoom3QueenKing"/>
-  <label class="form-check-label" for="checkRoom3King">Adjoining Rooms, 2 Queen Beds, 1 King Bed</label>
-</div>
-</div>
+// <div>
+//   <div class="form-check">
+//   <input type="checkbox" class="form-check-input" id="checkRoom3Queen"/>
+//   <label class="form-check-label" for="checkRoom3Queen">2 Queen Beds, 1 Sofa Bed</label>
+// </div>
+//   <div class="form-check">
+//   <input type="checkbox" class="form-check-input" id="checkRoom3QueenKing"/>
+//   <label class="form-check-label" for="checkRoom3King">Adjoining Rooms, 2 Queen Beds, 1 King Bed</label>
+// </div>
+// </div>
 
-);
+// );
 
 export function RoomsDropdown(props) {
   if(props.guests === "2") {
     return (
       <div>
-      <Form.Group controlId="CheckInRooms">
+      <Form.Group controlId="validationSelect">
     <Form.Label>Available Rooms</Form.Label>
     <Form.Control as="select" custom onChange={props.onChange}
     required
-    name="checkInRooms">
-      <option value="1King">1 King Bed</option>
-       <option value="2Queen">2 Queen Beds</option>
+    // isValid={false}
+    defaultValue="Select Your Room"
+    name="checkInRooms"
+    isInvalid={props.isInvalid}>
+      <option value="">Select Your Room</option>
+      <option value="1 King Bed">1 King Bed</option>
+       <option value="2 Queen Beds">2 Queen Beds</option>
     </Form.Control>
     <Form.Control.Feedback type="invalid">
         Required
       </Form.Control.Feedback>
   </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
+  <Form.Group controlId="validationSelect">
     <Form.Check type="checkbox" label="Adjoining Rooms" />
   </Form.Group>
     </div>
@@ -156,19 +160,21 @@ export function RoomsDropdown(props) {
   else if(props.guests === "3") {
     return (
       <div>
-      <Form.Group controlId="CheckInRooms">
+      <Form.Group controlId="validationSelect">
     <Form.Label>Available Rooms</Form.Label>
     <Form.Control as="select" custom onChange={props.onChange}
     required
+    defaultValue="Select Your Room"
     name="checkInRooms">
-       <option value="2Queen1Sofa">2 Queen Beds, 1 Sofa Bed</option>
-       <option value="2Queen1King">2 Rooms, 2 Queen Beds, 1 King Bed</option>
+      <option disabled>Select Your Room</option>
+       <option value="2 Queen Beds, 1 Sofa Bed">2 Queen Beds, 1 Sofa Bed</option>
+       <option value="2 Queen Beds, 1 King Bed">2 Rooms, 2 Queen Beds, 1 King Bed</option>
     </Form.Control>
     <Form.Control.Feedback type="invalid">
         Required
       </Form.Control.Feedback>
   </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
+  <Form.Group controlId="validationSelect">
     <Form.Check type="checkbox" label="Adjoining Rooms" />
   </Form.Group>
     </div>
@@ -177,13 +183,15 @@ export function RoomsDropdown(props) {
   else if(props.guests === "4") {
     return (
       <div>
-      <Form.Group controlId="CheckInRooms">
+      <Form.Group controlId="validationSelect">
     <Form.Label>Available Rooms</Form.Label>
     <Form.Control as="select" custom onChange={props.onChange}
     required
+    defaultValue="Select Your Room"
     name="checkInRooms">
-      <option value="2Queen1Sofa">2 Queen Beds</option>
-       <option value="2Queen1Sofa">2 Rooms, 4 Queen Beds</option>
+      <option disabled>Select Your Room</option>
+      <option value="2 Queen Beds, 1 Sofa Bed">2 Queen Beds</option>
+       <option value="4 Queen Beds">2 Rooms, 4 Queen Beds</option>
     </Form.Control>
     <Form.Control.Feedback type="invalid">
         Required
@@ -198,19 +206,21 @@ export function RoomsDropdown(props) {
   else if(props.guests === "5") {
     return (
       <div>
-      <Form.Group controlId="CheckInRooms">
+      <Form.Group controlId="validationSelect">
     <Form.Label>Available Rooms</Form.Label>
     <Form.Control as="select" custom onChange={props.onChange}
     required
+    defaultValue="Select Your Room"
     name="checkInRooms">
-       <option value="2Queen1Sofa">2 Rooms, 4 Queen Beds, 1 Sofa Bed</option>
+      <option disabled>Select Your Room</option>
+       <option value="4 Queen Beds, 1 Sofa Bed">2 Rooms, 4 Queen Beds, 1 Sofa Bed</option>
     </Form.Control>
     <Form.Control.Feedback type="invalid">
         Required
       </Form.Control.Feedback>
   </Form.Group>
   <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Adjoining Rooms" />
+    <Form.Check type="checkbox" label="Adjoining Rooms"/>
   </Form.Group>
     </div>
     );
@@ -218,12 +228,14 @@ export function RoomsDropdown(props) {
   else {
     return (
       <div>
-        <Form.Group controlId="CheckInRooms">
+        <Form.Group controlId="validationSelect">
       <Form.Label>Available Rooms</Form.Label>
       <Form.Control as="select" custom onChange={props.onChange}
       required
+      defaultValue="Select Your Room"
       name="checkInRooms">
-        <option value="1 King">1 King Bed</option>
+        <option disabled>Select Your Room</option>
+        <option value="1 King Bed">1 King Bed</option>
       </Form.Control>
       <Form.Control.Feedback type="invalid">
           Required

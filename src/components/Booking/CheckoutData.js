@@ -9,6 +9,7 @@ export const initialFormData = Object.freeze({
     checkInGuests: "1",
     checkInNights: "1",
     guestPrice: 0,
+    checkInRooms: "1 King Bed",
   });
 
 function CheckoutData() {
@@ -22,6 +23,7 @@ function CheckoutData() {
                  + ', '+ checkInData.checkInDate}</p>
                  <p>Guests: {checkInData.checkInGuests}</p>
                  <p>Nights: {checkInData.checkInNights}</p>
+                 <p>Beds: {checkInData.checkInRooms}</p>
                 <CheckoutForm/>
         </div>
         );

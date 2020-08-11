@@ -3,11 +3,9 @@ import Icon from '@mdi/react'
 import { mdiSwim, mdiSpa, mdiWifi, mdiAirFilter, mdiHotTub, mdiWheelchairAccessibility,  mdiCar, mdiBus,
     mdiDogSide, mdiSilverwareForkKnife, mdiGlassCocktail, mdiRoomService, mdiCoffee, mdiSourceCommitStartNextLocal, mdiCheck } from '@mdi/js';
 import outsidedoor from '../../assets/Photos/outsidedoor.jpg';
-import {BookingModal, BookingModalButton, bookingModalContent} from '../Booking/BookingModal';
-// import {SuccessModal} from '../Booking/SuccessModal';
-// import {SuccessAlert} from '../Booking/CheckoutModal';
-import {RoomOptions} from './monthDropDown';
+import {BookingModal, BookingModalButton} from '../Booking/BookingModal';
 import GlobalState from '../BookingState/BookingState'
+import { useHistory } from "react-router-dom";
 
 
 export const initialFormData = Object.freeze({
@@ -16,6 +14,7 @@ export const initialFormData = Object.freeze({
     checkInGuests: "1",
     checkInNights: "1",
     guestPrice: 0,
+    checkInRooms: "",
   });
   function GetGuestCost(data, roomPrice_1, roomPrice_2, roomPrice_3, roomPrice_4) {
       const {checkInGuests, checkInNights} = data;
@@ -40,17 +39,12 @@ export const initialFormData = Object.freeze({
 
 function HotelDataCard(props) {
         const [show, setShow] = useState(true);
+        const [isValid, setIsValid] = useState(false);
         const [ formData, updateFormData] = React.useState(initialFormData);
         const [checkoutModal, setCheckoutModalShow] = useState(false);
         const [state, setState] = useContext(GlobalState);
-
-        // const handleNext = () => {
-        //   setCheckoutModalShow(true);
-        // }
-        // const dropdownOptions = {
-        //   <RoomOptions value="1">1 King Bed</RoomOptions>
-
-        // }
+        const history = useHistory();
+        const [validated, setValidated] = useState(false);
 
         const handleChange = (e) => {
           updateFormData({
@@ -59,25 +53,27 @@ function HotelDataCard(props) {
           });
           setState(state => ({...state, guestCheckInData: formData}))
           console.log(formData);
+          if (formData.checkInRooms !== '') {
+            setIsValid(false);
+          }
         };
-        // useEffect(() => {
-        //   setState(state => ({...state, guestCheckInData: formData}))
-        // }, []);
-        // console.log(state);
       
         const handleSubmit = (e) => {
-          e.preventDefault();
-          console.log(formData);
-          setState(state => ({...state, guestCheckInData: formData}))
-          //console.log(formData);
-          // updateFormData({
-          //   ...formData,
-          //   [e.target.name]: e.target.value.trim()
-          // });
-          // console.log(formData);
-          // setCheckoutModalShow(true);
+          const form = e.currentTarget;
+            e.preventDefault();
+            e.stopPropagation();
+            if(formData.checkInRooms === "") {
+              setIsValid(true);
+            }
+          else if(formData.checkInRooms !== "") {
+            setState(state => ({...state, guestCheckInData: formData}))
+            setValidated(true);
+            history.push("/checkout");
+          }
         };
+
         const guestCostEstimate = GetGuestCost(formData, props.roomPrice_1, props.roomPrice_2, props.roomPrice_3, props.roomPrice_4);
+
     return (
         <div>
         <div className='hotelDataDiv'>
@@ -200,11 +196,14 @@ function HotelDataCard(props) {
             </ul>
         </div>
         <BookingModal
+        isInvalid={isValid}
         checkoutModalShow={checkoutModal}
         cancelModal={() => setCheckoutModalShow(false)}
         backdropClicked={() => setCheckoutModalShow(false)}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
+        checkRoomsError="checkRoomsError"
+        type="invalid"
         estimatedTotal={'$' + guestCostEstimate || 0}
         guests={formData.checkInGuests}
         roomPrice_1={props.roomPrice_1}
@@ -212,14 +211,6 @@ function HotelDataCard(props) {
         roomPrice_3={props.roomPrice_3}
         roomPrice_4={props.roomPrice_4}
         >{props.bookingModalTitle}</BookingModal>
-        {/* <CheckoutModal
-        bookingLocation={props.bookingModalTitle}
-        bookingGuests={formData.checkInGuests}
-        bookingDate={formData.checkInMonth + ', ' + formData.checkInDate}
-        totalCost={'$' + guestCostEstimate}
-        checkoutModalShow={checkoutModal}
-        handleCheckoutClose={() => setCheckoutModalShow(false)}
-        >Checkout</CheckoutModal> */}
     </div>
     );
 }

@@ -3,29 +3,10 @@ import { Form, Col, Row, Toast, Button, Alert, onExited, Modal } from "react-boo
 import {SuccessModal} from './SuccessModal';
 import { useHistory } from "react-router-dom";
 
-//  const initialCustomerFormData = Object.freeze({
-//   fullName: '',
-//   email: '',
-//   address: '',
-//   city: '',
-//   zipCode: '',
-//   state: ''
-// });
-
-
 export function CheckoutForm (props) {
     const [validated, setValidated] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
     const history = useHistory();
-    // const [ formData, updateFormData] = useState(initialCustomerFormData);
-    // const [alertShow, setAlertShow] = useState(false);
-
-    // const handleChange = (e) => {
-    //   updateFormData({
-    //     ...formData,
-    //     [e.target.name]: e.target.value.trim()
-    //   });
-    // };
 
     const handleClose = (event) => {
       setShowSuccess(false);
