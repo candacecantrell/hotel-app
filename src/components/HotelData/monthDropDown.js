@@ -8,7 +8,10 @@ export function MonthDropdown(props) {
     <div>
       <Form.Group controlId="exampleForm.SelectCustom">
       <Form.Label>Month</Form.Label>
-    <Form.Control as="select" custom onChange={props.onChange} name="checkInMonth">
+    <Form.Control as="select" custom 
+    defaultValue={props.defaultMonthValue || "January"}
+    onChange={props.onChange} 
+    name="checkInMonth">
       <option value="January">January</option>
       <option value="February">February</option>
       <option value="March">March</option>
@@ -36,7 +39,9 @@ export function DateDropdown(props) {
     <div>
       <Form.Group controlId="exampleForm.SelectCustom">
     <Form.Label>Check-In Date</Form.Label>
-    <Form.Control as="select" custom onChange={props.onChange}
+    <Form.Control as="select" custom 
+    defaultValue={props.defaultDateValue || "1"}
+    onChange={props.onChange}
     name="checkInDate">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -58,7 +63,9 @@ export function GuestsDropdown(props) {
     <div>
       <Form.Group controlId="exampleForm.SelectCustom">
     <Form.Label>Guests</Form.Label>
-    <Form.Control as="select" custom onChange={props.onChange}
+    <Form.Control as="select" custom
+    defaultValue={props.defaultGuestsValue || "1"}
+    onChange={props.onChange}
     name="checkInGuests">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -80,7 +87,9 @@ export function NightsDropdown(props) {
     <div>
       <Form.Group controlId="exampleForm.SelectCustom">
     <Form.Label>Nights</Form.Label>
-    <Form.Control as="select" custom onChange={props.onChange}
+    <Form.Control as="select" custom 
+    defaultValue={props.defaultNightsValue || "1"}
+    onChange={props.onChange}
     name="checkInNights">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -140,7 +149,7 @@ export function RoomsDropdown(props) {
     <Form.Control as="select" custom onChange={props.onChange}
     required
     // isValid={false}
-    defaultValue="Select Your Room"
+    defaultValue={props.defaultRoomValue || "Select Your Room"}
     name="checkInRooms"
     isInvalid={props.isInvalid}>
       <option value="">Select Your Room</option>
@@ -164,7 +173,8 @@ export function RoomsDropdown(props) {
     <Form.Label>Available Rooms</Form.Label>
     <Form.Control as="select" custom onChange={props.onChange}
     required
-    defaultValue="Select Your Room"
+    isInvalid={props.isInvalid}
+    defaultValue={props.defaultRoomValue || "Select Your Room"}
     name="checkInRooms">
       <option disabled>Select Your Room</option>
        <option value="2 Queen Beds, 1 Sofa Bed">2 Queen Beds, 1 Sofa Bed</option>
@@ -187,7 +197,8 @@ export function RoomsDropdown(props) {
     <Form.Label>Available Rooms</Form.Label>
     <Form.Control as="select" custom onChange={props.onChange}
     required
-    defaultValue="Select Your Room"
+    isInvalid={props.isInvalid}
+    defaultValue={props.defaultRoomValue || "Select Your Room"}
     name="checkInRooms">
       <option disabled>Select Your Room</option>
       <option value="2 Queen Beds, 1 Sofa Bed">2 Queen Beds</option>
@@ -210,7 +221,8 @@ export function RoomsDropdown(props) {
     <Form.Label>Available Rooms</Form.Label>
     <Form.Control as="select" custom onChange={props.onChange}
     required
-    defaultValue="Select Your Room"
+    isInvalid={props.isInvalid}
+    defaultValue={props.defaultRoomValue || "Select Your Room"}
     name="checkInRooms">
       <option disabled>Select Your Room</option>
        <option value="4 Queen Beds, 1 Sofa Bed">2 Rooms, 4 Queen Beds, 1 Sofa Bed</option>
@@ -232,7 +244,8 @@ export function RoomsDropdown(props) {
       <Form.Label>Available Rooms</Form.Label>
       <Form.Control as="select" custom onChange={props.onChange}
       required
-      defaultValue="Select Your Room"
+      isInvalid={props.isInvalid}
+      defaultValue={props.defaultRoomValue || "Select Your Room"}
       name="checkInRooms">
         <option disabled>Select Your Room</option>
         <option value="1 King Bed">1 King Bed</option>

@@ -202,8 +202,8 @@ function HotelDataCard(props) {
         backdropClicked={() => setCheckoutModalShow(false)}
         handleChange={handleChange}
         handleSubmit={handleSubmit}
-        checkRoomsError="checkRoomsError"
-        type="invalid"
+        // checkRoomsError="checkRoomsError"
+        // type="invalid"
         estimatedTotal={'$' + guestCostEstimate || 0}
         guests={formData.checkInGuests}
         roomPrice_1={props.roomPrice_1}

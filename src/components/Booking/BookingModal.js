@@ -4,19 +4,19 @@ import { NavLink } from "react-router-dom";
 import { Form, Col, Row, Toast, Button, Alert, onExited, Modal } from "react-bootstrap";
 
 export const BookingModal = (props, e) => {
-  const [validated, setValidated] = useState(false);
+  // const [validated, setValidated] = useState(false);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    // else { 
-    //   console.log(form.checkValidity());
-    //   setValidated(true);
-    // }
-    };
+  // const handleSubmit = (event) => {
+  //   const form = event.currentTarget;
+  //   if (form.checkValidity() === false) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //   }
+  //   // else { 
+  //   //   console.log(form.checkValidity());
+  //   //   setValidated(true);
+  //   // }
+  //   };
 return (
 <Modal show={props.checkoutModalShow} animation={true} keyboard="true"
 onHide={props.backdropClicked}>
@@ -28,11 +28,12 @@ onHide={props.backdropClicked}>
       </div>
       <Form validated={props.validated}>
       <div className="bookingModalClass">
-      <MonthDropdown onChange={props.handleChange}/>
-    <DateDropdown onChange={props.handleChange}/>
-    <GuestsDropdown onChange={props.handleChange}/>
-    <RoomsDropdown onChange={props.handleChange} isInvalid={props.isInvalid} validated={props.validated} guests={props.guests}></RoomsDropdown>
-    <NightsDropdown onChange={props.handleChange}/>
+      <MonthDropdown onChange={props.handleChange} defaultMonthValue={props.defaultMonthValue}/>
+    <DateDropdown onChange={props.handleChange} defaultDateValue={props.defaultDateValue} />
+    <GuestsDropdown onChange={props.handleChange} defaultGuestsValue={props.defaultGuestsValue}/>
+    <RoomsDropdown onChange={props.handleChange} isInvalid={props.isInvalid} validated={props.validated} guests={props.guests}
+    defaultRoomValue={props.defaultRoomValue}></RoomsDropdown>
+    <NightsDropdown onChange={props.handleChange} defaultNightsValue={props.defaultNightsValue}/>
     <p>Estimated Total: {props.estimatedTotal}</p>
     </div>
 
