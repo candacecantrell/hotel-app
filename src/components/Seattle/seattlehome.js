@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-// import './index.css';
-// import './sandiego.css'
 import HotelDataCard from '../HotelData/HotelData';
 import seattleHero from '../../assets/Photos/seattleHero.jpg';
-import BookingModal from '../Booking/BookingModal';
 
 class SeattleHome extends Component {
     constructor(props) {

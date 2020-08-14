@@ -1,22 +1,8 @@
 import React from 'react';
 
-import Logo from './Logo';
 import NavigationItems from './NavigationItems';
-//import Logo from '../../assets/images/Logo';
 import './SideDrawer.css';
 import Backdrop from '../NavigationItems/Backdrop/Backdrop';
-
-// const sideDrawer = (props) => {
-//     return (
-//         <div className="sideDrawer">
-//                 <button className="burgerMenu drawerToggleClicked"><a alt="burgerMenu"><i class="fas fa-bars"></i></a></button>
-//                 <nav>
-//                     <NavigationItems />
-//                 </nav>
-//         </div>
-    
-//     );
-// };
 
 const sideDrawer = ( props ) => {
     let attachedClasses = "SideDrawer Close";

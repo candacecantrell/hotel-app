@@ -8,6 +8,8 @@ import sandiegoSkyline from '../../assets/Photos/sandiegoskyline.jpg';
 import miamiSkyline from '../../assets/Photos/miamiSkyline.jpg';
 import palmTreesHeroImg from '../../assets/Photos/palmTreesHeroImg.jpg';
 
+import { Spinner } from "react-bootstrap";
+
 
 class AllHotelList extends Component {
     constructor(props) {
@@ -46,7 +48,9 @@ class AllHotelList extends Component {
         if (error) {
           return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
-          return <div>Loading...</div>;
+          return <div className="loadingClass">
+            <Spinner animation="border" />
+          </div>;
         } else {
           return (
             <div className="boxHotel">

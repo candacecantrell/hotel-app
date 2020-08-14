@@ -1,7 +1,7 @@
-import React, {useState, setState, useContext, useEffect} from 'react';
+import React, {useState, useContext} from 'react';
 import Icon from '@mdi/react'
 import { mdiSwim, mdiSpa, mdiWifi, mdiAirFilter, mdiHotTub, mdiWheelchairAccessibility,  mdiCar, mdiBus,
-    mdiDogSide, mdiSilverwareForkKnife, mdiGlassCocktail, mdiRoomService, mdiCoffee, mdiSourceCommitStartNextLocal, mdiCheck } from '@mdi/js';
+    mdiDogSide, mdiSilverwareForkKnife, mdiGlassCocktail, mdiRoomService, mdiCoffee, mdiCheck } from '@mdi/js';
 import outsidedoor from '../../assets/Photos/outsidedoor.jpg';
 import {BookingModal, BookingModalButton} from '../Booking/BookingModal';
 import GlobalState from '../BookingState/BookingState'
@@ -38,7 +38,6 @@ export const initialFormData = Object.freeze({
   }
 
 function HotelDataCard(props) {
-        const [show, setShow] = useState(true);
         const [isValid, setIsValid] = useState(false);
         const [ formData, updateFormData] = React.useState(initialFormData);
         const [checkoutModal, setCheckoutModalShow] = useState(false);
@@ -54,7 +53,7 @@ function HotelDataCard(props) {
           setState(state => ({...state, guestCheckInData: formData}))
           console.log(formData);
           if (formData.checkInRooms !== '') {
-            setIsValid(false);
+            setIsValid(false); 
           }
         };
       

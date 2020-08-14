@@ -1,10 +1,6 @@
 import React from 'react';
 import DrawerToggle from '../components/NavigationItems/DrawerToggle/DrawerToggle';
-//import Logo from './NavigationItems/Logo';
-//import NavigationItems from './NavigationItems/NavigationItems';
 import { NavLink } from "react-router-dom";
-
-// import './Toolbar.css';
 
 const toolbar = (props) => (
     <header className="toolbar" >

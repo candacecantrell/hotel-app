@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { Form, Col, Row, Toast, Button, Alert, onExited, Modal } from "react-bootstrap";
+import { Form, Col, Button } from "react-bootstrap";
 import {SuccessModal} from './SuccessModal';
 import { useHistory } from "react-router-dom";
 
@@ -43,10 +43,8 @@ return (
       <Form.Control
       type="text" 
       name="fullName"
-      // onChange={handleChange}
       placeholder="Full Name"
       required
-      // isInvalid={errors}
       />
       <Form.Control.Feedback type="invalid">
         Please provide your full name.
@@ -57,12 +55,9 @@ return (
       <Form.Label>Email</Form.Label>
       <Form.Control
       name="email"
-      // onChange={handleChange}
-      // value={formData.email}
       type="email"
       required
       placeholder="email@email.com"
-      // isInvalid={errors}
       />
       <Form.Control.Feedback type="invalid">
         Please provide a valid email.
@@ -76,9 +71,6 @@ return (
     <Form.Control 
     type="text"
     name="address"
-    // onChange={handleChange}
-    // value={formData.address}
-    // isInvalid={errors}
     placeholder="1234 Main St" 
     required/>
   </Form.Group>
@@ -94,10 +86,7 @@ return (
       <Form.Label>City</Form.Label>
       <Form.Control
       name="city"
-      // onChange={handleChange}
       placeholder="city"
-      // value={formData.city}
-      // isInvalid={errors}
       type="text" 
       required/>
       <Form.Control.Feedback type="invalid">
@@ -110,11 +99,7 @@ return (
           <Form.Control
           name="state"
           placeholder="State"
-          // onChange={handleChange}
-          // value={formData.state}
-          // isInvalid={errors}
-          type="text" 
-          placeholder="State" 
+          type="text"
           required />
           <Form.Control.Feedback type="invalid">
             Please provide a valid zip.
@@ -126,9 +111,6 @@ return (
           type="text" 
           placeholder="Zip Code" 
           name="zipCode"
-          // onChange={handleChange}
-          // value={formData.zipCode}
-          // isInvalid={errors}
           required />
           <Form.Control.Feedback type="invalid">
             Please provide a valid zip.
