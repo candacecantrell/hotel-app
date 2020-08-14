@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import HotelDataCard from '../HotelData/HotelData';
 import portlandHero from '../../assets/Photos/portlandHero.jpg';
 
+import { Spinner } from "react-bootstrap";
+
 class PortlandHome extends Component {
     constructor(props) {
         super(props);
@@ -38,7 +40,9 @@ class PortlandHome extends Component {
         if (error) {
           return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
-          return <div>Loading...</div>;
+          return <div className="loadingClass">
+          <Spinner animation="border" />
+        </div>
         } else {
           return (
             <div className="hotelDataAmenaties">

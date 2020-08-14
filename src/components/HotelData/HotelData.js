@@ -87,9 +87,9 @@ function HotelDataCard(props) {
               <div className="photoOverviewDiv">
                   <img className="hotelDataImg" src={outsidedoor} alt="hallway" />
                   <div className="overviewDiv">
-                <h4>Overview</h4>
+                <h4>Overview</h4> 
                 <p>
-                At the Fairfield Inn Provo, you’re our #1 priority. We promise you’ll be satisfied, or we’ll make it right. That’s our commitment to you. Ask us about The Fairfield 100% Guarantee. Every room has LG flat screen TVs and top of the line Serta Premium beds! We are ideal for weddings and family reunions, business groups & athletic teams. Only 5 minutes away from BYU and 8 minutes from UVU. Seven Peaks year round ice arena and summer water park are only 2 miles away. We are just off I-15 for easy access. FREE WiFi Fiber Optic Internet throughout the hotel.We offer daily a complimentary deluxe hot breakfast that includes: freshly brewed coffee, scrambled eggs and sausage, hot waffles, cereals, fresh fruit, and a lot more. Want some outdoor fun? Sundance Resort is just a 13 mile drive up Provo Canyon. You'll also enjoy seeing Bridal Veil Waterfall and the Provo River. Who wants to shop? We're right across the street from Provo Towne Centre Mall.
+                At Quinault Motels, you’re our #1 priority. We promise you’ll be satisfied, or we’ll make it right. That’s our commitment to you. Ask us about The Quinault 100% Guarantee. Every room has LG flat screen TVs and top of the line Serta Premium beds! We are ideal for weddings and family reunions, business groups & athletic teams. FREE WiFi Fiber Optic Internet throughout the hotel.We offer daily a complimentary deluxe hot breakfast that includes: freshly brewed coffee, scrambled eggs and sausage, hot waffles, cereals, fresh fruit, and a lot more.
 
                 </p>
                 <ul className="hotelDetailsList">

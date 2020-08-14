@@ -50,7 +50,7 @@ class AllHotelList extends Component {
         } else if (!isLoaded) {
           return <div className="loadingClass">
             <Spinner animation="border" />
-          </div>;
+          </div>
         } else {
           return (
             <div className="boxHotel">
