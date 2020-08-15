@@ -113,7 +113,7 @@ function HotelDataCard(props) {
               </div>
               </div>
               </div>
-              <h2>Amenaties</h2>
+              <h2>Amenities</h2>
             <ul className="hotelAmenatiesList">
                 <li className="listItem" > 
                 <Icon path={mdiSwim}
